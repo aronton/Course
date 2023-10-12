@@ -8,17 +8,14 @@ while (continueOrNot == "Y"):
 
     if(a == "Y"):
         add = input("How much you add ( ex lunch 10 )\n")
-        # print(int(add.split(" ",1)[1]))
-        # print(add)
         money = money + int(add.split(" ",1)[1])
     if(a == "N"):
         take = input("How much you take ( ex lunch -10 or lunch 10 )\n")
+        take = take.split(" ",1)[1]
         if(take[0] == "-"):
-            take = take.split(" ",1)[1]
-            take = int(take.split("-",1)[1])
-            money = money - int(take.split(" ",1)[1])
+            take = take.split("-",1)[1]
+            money = money - int(take)
         else:
-            take = int(take.split(" ",1)[1])
             money = money - int(take)
             
     print("Current Money is", money)
