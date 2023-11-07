@@ -1,5 +1,5 @@
-print("Welcome to PyMoney")
-money = 0
+print("Welcome to PyMoney ! How much money do you have?")
+money = input()
 print("Initial Money is", money)
 continueOrNot = input("If you want to add or take money, key Y, N to exist \n")
 while (continueOrNot == "Y"):
